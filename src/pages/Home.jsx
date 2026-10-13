@@ -363,9 +363,12 @@ export default function Home({ loadingFinished = false }) {
             밖으로 꺼내야 CSS의 position:fixed(뷰포트 하단 60px 고정)가
             의도대로 동작합니다. */}
         <p className="home__hero-desc">
-          <span className="home__hero-desc-line" style={{ display: 'block', overflow: 'hidden' }}><span className="home__hero-desc-line-inner" style={{ display: 'block' }}>빠른 작업 능력과 끝까지 놓치지 않는</span></span>
-          <span className="home__hero-desc-line" style={{ display: 'block', overflow: 'hidden' }}><span className="home__hero-desc-line-inner" style={{ display: 'block' }}>세밀함으로 완성도 있는 프로젝트를</span></span>
-          <span className="home__hero-desc-line" style={{ display: 'block', overflow: 'hidden' }}><span className="home__hero-desc-line-inner" style={{ display: 'block' }}>이끌어가는 프로덕트 디자이너 김연수입니다.</span></span>
+          <span className="home__hero-desc-line" style={{ display: 'block', overflow: 'hidden' }}>
+            <span className="home__hero-desc-line-inner" style={{ display: 'block' }}>빠른 작업 능력과 세밀함을 인정받으며</span></span>
+          <span className="home__hero-desc-line" style={{ display: 'block', overflow: 'hidden' }}>
+            <span className="home__hero-desc-line-inner" style={{ display: 'block' }}>완성도 높은 결과를 이끌어가는</span></span>
+          <span className="home__hero-desc-line" style={{ display: 'block', overflow: 'hidden' }}>
+            <span className="home__hero-desc-line-inner" style={{ display: 'block' }}>프로덕트 디자이너 김연수입니다.</span></span>
         </p>
 
 
