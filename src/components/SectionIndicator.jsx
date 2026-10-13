@@ -31,6 +31,14 @@ export default function SectionIndicator({ selector, labels }) {
     targetsRef.current = [first, ...phases, last]
 
     let raf = 0
+    // 페이지 진입 직후(홈에서 내려온 스크롤 위치가 맨 위로 리셋되기 전)에는
+    // 컨테이너 위치가 잠깐 화면 중앙에 걸려 인디케이터가 번쩍 보였다 사라집니다.
+    // 진입 후 잠깐(전환·스크롤 리셋이 끝날 때까지)은 계속 숨겨둡니다.
+    let ready = false
+    const readyTimer = setTimeout(() => {
+      ready = true
+      update()
+    }, 900)
     const update = () => {
       raf = 0
       const line = window.innerHeight * 0.4
@@ -40,7 +48,7 @@ export default function SectionIndicator({ selector, labels }) {
       })
       setActive(idx)
       const rect = container.getBoundingClientRect()
-      setVisible(rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.5)
+      setVisible(ready && rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.5)
     }
     const onScroll = () => {
       if (!raf) raf = requestAnimationFrame(update)
@@ -49,6 +57,7 @@ export default function SectionIndicator({ selector, labels }) {
     window.addEventListener('scroll', onScroll, { passive: true })
     window.addEventListener('resize', onScroll)
     return () => {
+      clearTimeout(readyTimer)
       window.removeEventListener('scroll', onScroll)
       window.removeEventListener('resize', onScroll)
       if (raf) cancelAnimationFrame(raf)
