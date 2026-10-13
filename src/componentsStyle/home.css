@@ -52,7 +52,8 @@
      포함되지 않아서, margin-top을 주면 박스 자체가 진짜로 아래로
      밀려나(전체 높이 계산에 영향 없이) 헤더 높이만큼 진짜 여백이
      생깁니다. */
-  margin-bottom: 400px;
+  /* 1920px 이상에서는 히어로가 커지는 만큼 아래 간격도 같이 커져서 WORK와 안 붙음 (1920 이하는 기존 400px 유지) */
+  margin-bottom: calc(400px * max(1, var(--r)));
 }
 .home__hero-stage {
   position: absolute;
@@ -89,7 +90,7 @@
   transform: translate(calc(-50% + 380px * var(--r)), -50%) scale(var(--r));
 }
 
-@media (max-width: 1920px) {
+@media (min-width: 0px) { /* 1920px 상한 제거: 모든 폭에서 동일 */
   .home__hero-stage {
     top: 120px;
     transform: translate(-50%, 0%) scale(var(--k19));
@@ -143,7 +144,7 @@
 }
 .home__hero-img-me {
   /* 이미지 너비(--img-w). 태블릿은 아래 @media에서 값만 바꿉니다 */
-  --img-w: calc(min(100vw, 1920px) * 0.984375);
+  --img-w: calc(100vw * 0.984375); /* 1920px 상한 제거 */
   flex: none;
   width: var(--img-w);
   aspect-ratio: 1920 / 1191;

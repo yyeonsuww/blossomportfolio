@@ -12,7 +12,7 @@ import './styles/components.css'
 function updateViewportScale() {
   const w = window.innerWidth
   const root = document.documentElement.style
-  root.setProperty('--k19', String(Math.min(w, 1920) / 1920))
+  root.setProperty('--k19', String(w / 1920)) // 1920px 상한 없음: 큰 화면에서도 히어로가 꽉 차게 비례 확대
   root.setProperty('--k11', String(Math.min(w, 1440) / 1100))
   root.setProperty('--m487', String(w / 487))
   root.setProperty('--u487', String(487 / w))
