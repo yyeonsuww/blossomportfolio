@@ -119,7 +119,7 @@ function PageTransitionRoutes({ loadingFinished }) {
   }, [location.pathname, location.search, location.hash, displayLocation]);
 
   useLayoutEffect(() => {
-    if (!isTransitioning || !outgoingRef.current || !incomingRef.current) return undefined;
+    if (!isTransitioning || !incomingRef.current) return undefined;
 
     const timeline = gsap.timeline({
       onComplete: () => {
@@ -136,13 +136,18 @@ function PageTransitionRoutes({ loadingFinished }) {
       },
     });
 
-    timeline
-      .to(outgoingRef.current, {
+    // 홈에서 나가는 경우엔 나가는 쪽 홈을 아예 그리지 않습니다(아래 showOutgoing).
+    // 나가는 홈을 새로 마운트하면 홈 인트로(YEONSU가 올라오는 모션)가 처음부터 다시 재생돼서
+    // 프로젝트 페이지 뒤로 블러된 채 보였기 때문입니다.
+    if (outgoingRef.current) {
+      timeline.to(outgoingRef.current, {
         opacity: 0,
         filter: 'blur(8px)',
         duration: 0.6,
         ease: 'power2.inOut',
       })
+    }
+    timeline
       .fromTo(incomingRef.current,
         { opacity: 0, filter: 'blur(8px)' },
         { opacity: 1, filter: 'blur(0px)', duration: 0.85, ease: 'power2.out' },
@@ -151,6 +156,8 @@ function PageTransitionRoutes({ loadingFinished }) {
 
     return () => timeline.kill();
   }, [isTransitioning]);
+
+  const showOutgoing = outgoingLocation && outgoingLocation.pathname !== '/'
 
   const renderRoutes = (routeLocation) => (
     <Routes location={routeLocation}>
@@ -166,7 +173,7 @@ function PageTransitionRoutes({ loadingFinished }) {
 
   return (
     <div style={{ position: 'relative', width: '100%' }}>
-      {outgoingLocation && (
+      {showOutgoing && (
         <div ref={outgoingRef} style={{ position: 'absolute', inset: 0, zIndex: 2, width: '100%' }}>
           {renderRoutes(outgoingLocation)}
         </div>
