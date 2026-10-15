@@ -76,7 +76,7 @@ export default function ProjectPassing() {
           />
           <ContentSection
             showEyebrow={false}
-            title="티켓 사기는 X에서 실제로 많이 일어날까?"
+            title="티켓 사기는 X(트위터)에서 실제로 많이 일어날까?"
             description="X(트위터)에서 티켓 사기가 실제로 많은지 검증하고자 더치트의 티켓 사기 사례를 분석한 결과, 공식적인 채널별 사기 비율은 확인할 수 없었지만 신고 사례에서 X(트위터) 거래가 가장 두드러졌습니다. 또한 자체 안전거래 시스템 없이 DM으로 거래가 이루어져 구조적으로 사기를 막기 어렵다는 점을 확인했고, 이를 해결할 필요가 있다고 판단했습니다."
             items={[{ src: `${import.meta.env.BASE_URL}assets/passing/img-passing-research2.svg`, label: 'X(트위터)에서 일어나는 P2P 거래 실제 게시글' }, { src: `${import.meta.env.BASE_URL}assets/passing/img-passing-research3.svg` }]}
           />
