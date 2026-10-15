@@ -70,14 +70,14 @@ export default function ProjectPassing() {
         <div className="project-passing__section project-passing__group project-passing__section--rounded">
           <ContentSection
             eyebrow="DESK RESEARCH"
-            title="왜 티켓인가?"
+            title="수많은 P2P 거래 품목 중, 왜 티켓인가?"
             description={`먼저 어떤 품목의 사기 피해가 가장 큰지 확인하고자 뉴스 17건과 학술 연구 6건을 분석했습니다. 그 결과 티켓·상품권이 사기 피해 1위였고, 20대 피해가 가장 많았으며 10대 피해도 늘고 있었습니다. 젊은 층도 쉽게 피해를 입을 만큼 사기 수법이 교묘해지고 있다는 점에서 반드시 풀어야 할 문제라고 판단했습니다.\n\n티켓류 중 상품권과 이용권은 사후 환불로 해결이 가능해 제외했습니다. 환불로도 공연이 돌아오지 않는 점에서 티켓만 최종 대상으로 남겼습니다.`}
             items={[{ src: `${import.meta.env.BASE_URL}assets/passing/img-passing-research1.svg` }]}
           />
           <ContentSection
             showEyebrow={false}
-            title="왜 X(트위터)인가?"
-            description="이후 구조적으로 안전장치가 부족함에도 X(트위터)에서 거래하는 이유를 분석했습니다. 더치트 사기 신고 데이터와 온라인 거래 사례 및 미디어 피해 사례를 분석해 가짜 예매 내역 인증, 조급한 입금 유도 등 반복되는 사기 패턴을 확인했습니다. 또한 실시간 매물과 팬덤 중심의 높은 접근성이 X(트위터)를 이용하는 주요 요인임을 도출했습니다."
+            title="티켓 사기는 X에서 실제로 많이 일어날까?"
+            description="X(트위터)에서 티켓 사기가 실제로 많은지 검증하고자 더치트의 티켓 사기 사례를 분석한 결과, 공식적인 채널별 사기 비율은 확인할 수 없었지만 신고 사례에서 X(트위터) 거래가 가장 두드러졌습니다. 또한 자체 안전거래 시스템 없이 DM으로 거래가 이루어져 구조적으로 사기를 막기 어렵다는 점을 확인했고, 이를 해결할 필요가 있다고 판단했습니다."
             items={[{ src: `${import.meta.env.BASE_URL}assets/passing/img-passing-research2.svg`, label: 'X(트위터)에서 일어나는 P2P 거래 실제 게시글' }, { src: `${import.meta.env.BASE_URL}assets/passing/img-passing-research3.svg` }]}
           />
         </div>
@@ -86,8 +86,8 @@ export default function ProjectPassing() {
         <div className="project-passing__section">
           <ContentSection
             eyebrow="CASESTUDY ANALYSIS"
-            title="위험한데도 왜 계속 X(트위터)를 쓸까?"
-            description="시장 조사를 위해 안전장치를 갖춘 경쟁사의 거래 구조를 비교 분석했습니다. 티켓 전문 플랫폼은 사기 발생 시 환불을 제공하지만 판매자의 무단 취소 등 거래 과정의 위험은 사전에 차단하기 어려운 한계를 확인했습니다."
+            title="사람들은 왜 X(트위터)에서 티켓을 거래할까?"
+            description="실제로 어떤 점 때문에 X(트위터)에서 거래하는지를 알아보고자 커뮤니티 정성 분석과 온라인 실제 피해 사례들을 분석했습니다. 그 결과 실시간으로 올라오는 매물과 팬덤 중심의 높은 접근성이 X를 이용하는 주요 요인임을 도출했습니다."
             items={[{ src: `${import.meta.env.BASE_URL}assets/passing/img-passing-casestudy.svg` }]}
           />
         </div>
@@ -108,7 +108,7 @@ export default function ProjectPassing() {
             layout="split"
             eyebrow="USER INTERVIEWS"
             title="검증한 ‘X(트위터)를 떠나지 못하는 이유’"
-            description="앞선 리서치를 바탕으로 팬 1명, 일반 관람객 2명을 대상으로 인터뷰를 진행했습니다. 사용자들은 예상대로 X(트위터)의 위험성을 알고 있었지만 티켓을 빠르게 찾을 수 있다는 이유로 계속 이용하기도 했습니다. 새로운 문제를 발견하기보다는 앞서 확인한 ‘위험을 알면서도 떠나지 못하는 이유’를 검증하는 과정이었습니다."
+            description="앞서 도출한 X(트위터) 이용 요인을 검증하고자 팬 1명, 일반 관람객 2명을 대상으로 인터뷰했습니다. 실제로도 X를 실시간성과 팬덤 때문에 찾지만 사기가 무서워 조심하며 사용하는 경우가 있었습니다."
             items={[{ src: `${import.meta.env.BASE_URL}assets/passing/img-passing-interview.svg`, label: "'참여자 A'와 인터뷰 과정" }]}
           />
           <InterviewBox />
