@@ -107,7 +107,7 @@ export default function ProjectPassing() {
           <ContentSection
             layout="split"
             eyebrow="USER INTERVIEWS"
-            title="검증한 ‘X(트위터)를 떠나지 못하는 이유’"
+            title="검증한 ‘X(트위터)에서 계속 거래하는 이유’"
             description="앞서 도출한 X(트위터) 이용 요인을 검증하고자 팬 1명, 일반 관람객 2명을 대상으로 인터뷰했습니다. 실제로도 X를 실시간성과 팬덤 때문에 찾지만 사기가 무서워 조심하며 사용하는 경우가 있었습니다."
             items={[{ src: `${import.meta.env.BASE_URL}assets/passing/img-passing-interview.svg`, label: "'참여자 A'와 인터뷰 과정" }]}
           />
