@@ -6,7 +6,7 @@ const defaultProjects = [
   {
     tags: ['#AI검증', '#B2C', '#핀테크'],
     title: 'AI 티켓 사기 예방 ‘패싱’',
-    description: 'SNS 티켓 거래의 사기 취약점을 해결해 AI 사전 검증으로 보호하는 티켓 거래 플랫폼',
+    description: 'SNS 티켓 거래의 사기 취약점을 AI 사전 검증으로 해결하는 티켓 거래 플랫폼',
     to: '/works/project-passing',
     video: `${import.meta.env.BASE_URL}assets/home-passing.mp4`,
   },
