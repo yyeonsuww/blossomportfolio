@@ -12,7 +12,7 @@ function getViewportBreakpoint() {
 
 export default function PhaseIntro({
   breakpoint,
-  desc = '왜 티켓 사기는 X(트위터)에 몰리고 사람들은 그런데도 왜 X(트위터)에서 거래할까?',
+  desc = '티켓 사기는 왜 X(트위터)에 몰리고 사람들은 그런데도 왜 X(트위터)에서 거래할까?',
   headline = 'Why do ticket scams cluster on X(Twitter), and why do people still trade on X(Twitter)?',
   title = 'EMPATHIZE',
 }) {
