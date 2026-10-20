@@ -364,7 +364,7 @@ export default function Home({ loadingFinished = false }) {
             의도대로 동작합니다. */}
         <p className="home__hero-desc">
           <span className="home__hero-desc-line" style={{ display: 'block', overflow: 'hidden' }}>
-            <span className="home__hero-desc-line-inner" style={{ display: 'block' }}>빠른 작업 능력과 세밀함을 인정받으며</span></span>
+            <span className="home__hero-desc-line-inner" style={{ display: 'block' }}> 빠른 실행력과 꼼꼼함을 인정받으며</span></span>
           <span className="home__hero-desc-line" style={{ display: 'block', overflow: 'hidden' }}>
             <span className="home__hero-desc-line-inner" style={{ display: 'block' }}>완성도 높은 결과를 이끌어가는</span></span>
           <span className="home__hero-desc-line" style={{ display: 'block', overflow: 'hidden' }}>
